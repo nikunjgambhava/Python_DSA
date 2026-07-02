@@ -7,7 +7,5 @@ def selection_sort(arr):
                 min_idx = j
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
     return arr
-
-# Example
 marks = [78, 55, 89, 92, 67]
 print("Selection Sort:", selection_sort(marks))
