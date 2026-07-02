@@ -5,7 +5,6 @@ def check_spam(email):
         if item == email:
             return True
     return False
-
 email = "fraud2@abc.com"
 if check_spam(email):
     print(email, "is SPAM")
