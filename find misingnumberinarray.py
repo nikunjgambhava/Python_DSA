@@ -28,5 +28,3 @@ re=(n*(n+1)//2)-s
 print(re)
    
 
-
-git remote add origin https://github.com/nikunjgambhava/Python_DSA.git
