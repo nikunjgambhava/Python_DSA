@@ -1,27 +1,19 @@
-nums=[10,12,14,15,2,4,5,6,7,8,9]
-target=15
-
-
-# 1 brute solutution
-
-# def ser(nums,target):
-#     for i in range(len(nums)):
-#         if(target==nums[i]):
-#             return i
-#     return "NOT FOUND"
-# print(ser(nums,target))
-    
-    
-# 2
-
-def ser2(nums,target):
+#dulpicate array
+nums=[7,7,7,7,7,7,7,1,2,3,4,5,6,7]
+target=1
+def ser(nums,target):
     l=0
     h=len(nums)-1
 
     while(l<=h):
         mid =(l+h)//2
         if(nums[mid]==target):
-            return mid
+            return "found"
+        if(nums[l]==nums[mid]==nums[h]):
+            l+=1
+            h-=1
+            continue
+        
         if(nums[mid]<=nums[h]):
             if(nums[mid]<=target<=nums[h]):
                 l=mid+1
@@ -34,8 +26,4 @@ def ser2(nums,target):
                 l=mid+1
     return "not found"
             
-print(ser2(nums, target))
-
-
-
-        
+print(ser(nums, target))
